@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="applimds" version="4">
+  <OBJECT>
+    <ID name="applimds" mc="Standard.Package" uid="1ddf2233-c914-4650-98d4-7ccb401d542a"/>
+    <PID name="AppliMDS" mc="Standard.Project" uid="ae3a7808-fefc-4ed4-89dc-cee4eaf64f79"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[applimds]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Utilisateurs" mc="Standard.Actor" uid="f525af80-35aa-420c-8f4e-4e803e73febd"/>
+        <COMPID name="Visiter le front" mc="Standard.UseCase" uid="f6fce3a5-3b94-4d80-9ad0-f607c9e8f5b8"/>
+        <COMPID name="Utilisateur connecté" mc="Standard.Actor" uid="da830c9d-fe1f-4798-8445-ac4a46f5948a"/>
+        <COMPID name="Se déconnecter" mc="Standard.UseCase" uid="4771eb4d-bcf7-4ab4-94a6-bd95f464a27c"/>
+        <COMPID name="Se connecter" mc="Standard.UseCase" uid="a3b2881d-0dde-40af-a732-cfe38e67bc3e"/>
+        <COMPID name="Utilisateur non connecté" mc="Standard.Actor" uid="72f53958-8027-43ae-91a3-718be65e9253"/>
+        <COMPID name="Joueur" mc="Standard.Actor" uid="2efe30e4-6579-487f-9402-4ba757d19a3b"/>
+        <COMPID name="Consulter les entrainements" mc="Standard.UseCase" uid="cddbdcf2-ef99-4984-acb2-0c387fb8a0ee"/>
+        <COMPID name="Consulter les matchs" mc="Standard.UseCase" uid="3bd71c42-b27c-40cf-b23d-de3790bd254c"/>
+        <COMPID name="Consulter les terrains" mc="Standard.UseCase" uid="3c0d2099-e6ac-4d8a-9cd1-48517e68f2d3"/>
+        <COMPID name="Acheter des produits" mc="Standard.UseCase" uid="4981ee55-a9a1-4fb1-a1fb-0c80bf30d022"/>
+        <COMPID name="Payer" mc="Standard.UseCase" uid="c1dbcb76-ed24-4b63-9c9f-297c385a19ba"/>
+        <COMPID name="entraineur" mc="Standard.Actor" uid="4eeacbe8-69b9-4c4c-bfe5-9b019a7e2fcc"/>
+        <COMPID name="Gerer les entrainements" mc="Standard.UseCase" uid="05c879b9-d8bc-4157-bdfd-37389b64183c"/>
+        <COMPID name="Dirigeant" mc="Standard.Actor" uid="f6617da7-fe85-4708-b73b-13e7d4c0efbb"/>
+        <COMPID name="Gérer les terrains" mc="Standard.UseCase" uid="490c5e61-8258-4e10-9fe0-a6bcedca3644"/>
+        <COMPID name="Editer les convocations" mc="Standard.UseCase" uid="522e3797-10b6-4044-8575-638d16e1d55d"/>
+        <COMPID name="Gerer le club" mc="Standard.UseCase" uid="f94f8b98-0167-42f5-9f5d-6bf336ed8ad0"/>
+        <COMPID name="Gerer les joueurs" mc="Standard.UseCase" uid="c35fbba7-1bf8-4a39-b30f-090368c395c1"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="AppliMDS" mc="Standard.UseCaseDiagram" uid="498ea687-6908-4d5d-8519-bbbc79a5836d"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

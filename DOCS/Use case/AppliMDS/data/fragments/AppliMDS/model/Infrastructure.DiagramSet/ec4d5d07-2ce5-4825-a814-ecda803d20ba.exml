@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="AppliMDS" version="4">
+  <OBJECT>
+    <ID name="AppliMDS" mc="Infrastructure.DiagramSet" uid="ec4d5d07-2ce5-4825-a814-ecda803d20ba"/>
+    <PID name="AppliMDS" mc="Standard.Project" uid="ae3a7808-fefc-4ed4-89dc-cee4eaf64f79"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[AppliMDS]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>
