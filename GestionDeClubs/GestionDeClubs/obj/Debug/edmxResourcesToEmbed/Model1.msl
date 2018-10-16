@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ClubFootModelStoreContainer" CdmEntityContainer="ClubFootEntities">
+    <EntitySetMapping Name="Club">
+      <EntityTypeMapping TypeName="ClubFootModel.Club">
+        <MappingFragment StoreEntitySet="Club">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="adresse" ColumnName="adresse" />
+          <ScalarProperty Name="codePostal" ColumnName="codePostal" />
+          <ScalarProperty Name="ville" ColumnName="ville" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Entrainement">
+      <EntityTypeMapping TypeName="ClubFootModel.Entrainement">
+        <MappingFragment StoreEntitySet="Entrainement">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EntrainementClubTerrain">
+      <EntityTypeMapping TypeName="ClubFootModel.EntrainementClubTerrain">
+        <MappingFragment StoreEntitySet="EntrainementClubTerrain">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_Entrainement" ColumnName="id_Entrainement" />
+          <ScalarProperty Name="id_Terrain" ColumnName="id_Terrain" />
+          <ScalarProperty Name="id_Club" ColumnName="id_Club" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Matchs">
+      <EntityTypeMapping TypeName="ClubFootModel.Matchs">
+        <MappingFragment StoreEntitySet="Matchs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MatchsClubTerrain">
+      <EntityTypeMapping TypeName="ClubFootModel.MatchsClubTerrain">
+        <MappingFragment StoreEntitySet="MatchsClubTerrain">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_Matchs" ColumnName="id_Matchs" />
+          <ScalarProperty Name="id_Terrain" ColumnName="id_Terrain" />
+          <ScalarProperty Name="id_Club" ColumnName="id_Club" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produit">
+      <EntityTypeMapping TypeName="ClubFootModel.Produit">
+        <MappingFragment StoreEntitySet="Produit">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="prix" ColumnName="prix" />
+          <ScalarProperty Name="id_Club" ColumnName="id_Club" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Statut">
+      <EntityTypeMapping TypeName="ClubFootModel.Statut">
+        <MappingFragment StoreEntitySet="Statut">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="label" ColumnName="label" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Terrain">
+      <EntityTypeMapping TypeName="ClubFootModel.Terrain">
+        <MappingFragment StoreEntitySet="Terrain">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adresse" ColumnName="adresse" />
+          <ScalarProperty Name="id_Club" ColumnName="id_Club" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ClubFootModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="prenom" ColumnName="prenom" />
+          <ScalarProperty Name="id_Statut" ColumnName="id_Statut" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="identifiant" ColumnName="identifiant" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="id_Club" ColumnName="id_Club" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

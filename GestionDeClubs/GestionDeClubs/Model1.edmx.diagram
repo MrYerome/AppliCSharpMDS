@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="001511a4435e4e65b36664c545d3fd38" Name="Diagram1">
+        <EntityTypeShape EntityType="ClubFootModel.Club" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClubFootModel.Entrainement" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClubFootModel.EntrainementClubTerrain" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClubFootModel.Matchs" Width="1.5" PointX="6" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClubFootModel.MatchsClubTerrain" Width="1.5" PointX="8.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClubFootModel.Produit" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClubFootModel.Statut" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClubFootModel.Terrain" Width="1.5" PointX="3" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClubFootModel.Users" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="ClubFootModel.EntrainementClubTerrain_Club_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ClubFootModel.MatchsClubTerrain_Club_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ClubFootModel.Produit_Club_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ClubFootModel.Terrain_Club_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ClubFootModel.Users_Club_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ClubFootModel.EntrainementClubTerrain_Entrainement_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ClubFootModel.EntrainementClubTerrain_Terrain1_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ClubFootModel.MatchsClubTerrain_Match0_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ClubFootModel.MatchsClubTerrain_Terrain1_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ClubFootModel.Users_Statut_FK" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
