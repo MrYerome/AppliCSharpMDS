@@ -7,6 +7,9 @@
     <h3>Ajouter un utilisateur</h3>
     <asp:TextBox ID="identifiant" runat="server" Text="Votre identifiant"></asp:TextBox>
         <asp:TextBox ID="password" runat="server" Text="Votre mot de passe"></asp:TextBox>
+    <asp:DropDownList ID="DDLClubs" runat="server">
+
+</asp:DropDownList>
     <asp:Button runat="server" ID="submitForm" Text="Valider" onclick="ValidateUser"/>
     
 

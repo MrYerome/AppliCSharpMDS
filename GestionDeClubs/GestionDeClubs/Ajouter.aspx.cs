@@ -17,13 +17,13 @@ namespace GestionDeClubs
         private ClubFootEntities db = new ClubFootEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
+            db = new ClubFootEntities();
+            DDLClubs.DataSource = db.Club;
+            DDLClubs.DataTextField = "champ_a_afficher";
+            DDLClubs.DataValueField = "champ_valeur";
+            DDLClubs.DataBind();
+        }
 
-        }
-        
-        protected void Login1_Authenticate()
-        {
-            
-        }
 
         protected void ValidateUser(object sender, EventArgs e)
         {
