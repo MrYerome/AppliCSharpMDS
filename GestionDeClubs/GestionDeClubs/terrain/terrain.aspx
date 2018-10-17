@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Ajouter Terrain" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="addTerrain.aspx.cs" Inherits="GestionDeClubs.terrain.addTerrain" %>
+﻿<%@ Page Title="Gestion Terrains" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="terrain.aspx.cs" Inherits="GestionDeClubs.terrain.terrain" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
         <h1>Gestion des terrains</h1>
         <div class="row">

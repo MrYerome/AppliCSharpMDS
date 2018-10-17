@@ -10,7 +10,7 @@
 namespace GestionDeClubs.terrain {
     
     
-    public partial class addTerrain {
+    public partial class terrain {
         
         /// <summary>
         /// Contrôle addressTerrain.
