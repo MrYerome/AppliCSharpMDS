@@ -55,6 +55,7 @@
                         <li><a runat="server" href="~/">Accueil</a></li>
                         <li><a runat="server" href="~/About">À propos de</a></li>
                         <li><a runat="server" href="~/Ajouter">Ajouter</a></li>
+                        <li><a runat="server" href="~/terrain/addTerrain">Terrain</a></li>
                     </ul>
                 </div>
             </div>
