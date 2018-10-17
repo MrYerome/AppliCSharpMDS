@@ -17,14 +17,26 @@ namespace GestionDeClubs
         private ClubFootEntities db = new ClubFootEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-        
-        protected void Login1_Authenticate()
-        {
-            
+            GetDDLClubs();
         }
 
+        public List<DropDownList> GetDDLClubs() {
+            ClubFootEntities context = new ClubFootEntities();
+
+            List<DropDownList> DDLClubs = new List<DropDownList>();
+            var obj = context.Club.Select(c => c.nom).ToList();
+            if (obj != null && obj.Count() > 0)
+            {
+                foreach (var data in obj)
+                {
+                    DropDownList model = new DropDownList();
+                    result.Add(model);
+
+                }
+                return DDLClubs;
+            }
+            else return null;
+        }
         protected void ValidateUser(object sender, EventArgs e)
         {
             db = new ClubFootEntities();
