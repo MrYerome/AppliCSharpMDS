@@ -39,7 +39,7 @@ namespace GestionDeClubs.connexion
             if(isValidUser(login.Text, password.Text))
             {
                 Users user = entities.Users.FirstOrDefault(x => x.identifiant == login.Text && x.password == password.Text);
-                Page.Session["userConected"] = user;
+                Page.Session["userConnected"] = user;
                 Response.Redirect("../Default");
             }
         }
