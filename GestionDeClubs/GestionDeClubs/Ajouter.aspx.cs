@@ -30,8 +30,8 @@ namespace GestionDeClubs
                 foreach (var data in obj)
                 {
                     DropDownList model = new DropDownList();
-                    result.Add(model);
-
+                    DDLClubs.Add(model);
+                    DDLClubs.Add(data);
                 }
                 return DDLClubs;
             }
