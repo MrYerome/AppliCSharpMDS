@@ -1,0 +1,2 @@
+C:\Users\dav\Documents\AppliCSharpMDS\GestionDeClubs\GestionDeClubs\obj\Release\GestionDeClubs.csprojAssemblyReference.cache
+C:\Users\dav\Documents\AppliCSharpMDS\GestionDeClubs\GestionDeClubs\obj\Release\GestionDeClubs.csproj.CoreCompileInputs.cache
