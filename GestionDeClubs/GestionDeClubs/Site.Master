@@ -16,6 +16,7 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+
 </head>
 <body>
     <form runat="server">
@@ -53,7 +54,7 @@
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Accueil</a></li>
                         <li><a runat="server" href="~/About">À propos de</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li><a runat="server" href="~/Ajouter">Ajouter</a></li>
                     </ul>
                 </div>
             </div>
