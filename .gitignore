@@ -8,3 +8,13 @@ GestionDeClubs/.vs/GestionDeClubs/v15/Server/sqlite3/storage.ide-shm
 GestionDeClubs/.vs/GestionDeClubs/v15/Server/**
 GestionDeClubs/.vs/**
 
+
+GestionDeClubs/\.vs/
+
+GestionDeClubs/GestionDeClubs/bin/
+
+GestionDeClubs/GestionDeClubs\.Tests/obj/Debug/
+
+GestionDeClubs/GestionDeClubs/obj/
+
+GestionDeClubs/GestionDeClubs/Model1\.Designer\.cs
