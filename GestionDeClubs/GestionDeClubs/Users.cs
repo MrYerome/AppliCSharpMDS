@@ -22,6 +22,7 @@ namespace GestionDeClubs
         public string identifiant { get; set; }
         public string password { get; set; }
         public int id_Club { get; set; }
+        public string poste { get; set; }
     
         public virtual Club Club { get; set; }
         public virtual Statut Statut { get; set; }
