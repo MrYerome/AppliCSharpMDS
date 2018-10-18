@@ -58,7 +58,7 @@
 
                         <% if (Page.Session["userConnected"] != null)
                         { %>
-                            <li><a runat="server" href="~/terrain/addTerrain">Terrains</a></li>
+                            <li><a runat="server" href="~/terrain/terrain">Terrains</a></li>
                         <%}%>
                         
                     </ul>

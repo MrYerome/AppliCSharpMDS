@@ -14,7 +14,11 @@ namespace GestionDeClubs.terrain
         private Users userConnected = new Users();
         protected void Page_Load(object sender, EventArgs e)
         {
-           if(Page.Session["userConnected"] != null)
+#if DEBUG
+            Users user = entities.Users.FirstOrDefault(x => x.identifiant == "cgouin" && x.password == "password");
+            Page.Session["userConnected"] = user;
+#endif
+            if (Page.Session["userConnected"] != null)
             {
                 userConnected = (Users)Page.Session["userConnected"];
             }
@@ -32,12 +36,17 @@ namespace GestionDeClubs.terrain
                 terrain.adresse = addressTerrain.Text;
                 terrain.Club = userConnected.Club;
                 entities.Terrain.Add(terrain);
-                entities.SaveChangesAsync();
+                saveChanges();
 
             }catch(Exception error)
             {
                 Console.WriteLine(error.Message);
             }
+        }
+
+        protected void saveChanges()
+        {
+            entities.SaveChanges();
         }
     }
 }
