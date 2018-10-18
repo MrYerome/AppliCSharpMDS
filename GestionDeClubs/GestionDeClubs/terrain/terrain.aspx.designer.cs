@@ -13,6 +13,24 @@ namespace GestionDeClubs.terrain {
     public partial class terrain {
         
         /// <summary>
+        /// Contrôle nameTerrain.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox nameTerrain;
+        
+        /// <summary>
+        /// Contrôle requireName.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requireName;
+        
+        /// <summary>
         /// Contrôle addressTerrain.
         /// </summary>
         /// <remarks>
@@ -22,13 +40,13 @@ namespace GestionDeClubs.terrain {
         protected global::System.Web.UI.WebControls.TextBox addressTerrain;
         
         /// <summary>
-        /// Contrôle requireAdresse.
+        /// Contrôle requireAddress.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requireAdresse;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requireAddress;
         
         /// <summary>
         /// Contrôle addTerrainButton.

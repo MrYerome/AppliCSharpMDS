@@ -33,12 +33,17 @@ namespace GestionDeClubs.terrain
             try
             {
                 Terrain terrain = new Terrain();
+                terrain.nom = nameTerrain.Text;
                 terrain.adresse = addressTerrain.Text;
                 terrain.Club = userConnected.Club;
                 entities.Terrain.Add(terrain);
                 saveChanges();
-
-            }catch(Exception error)
+                nameTerrain.Text = "";
+                addressTerrain.Text = "";
+                Page.Response.Write("<script>$('#massageValidate').text = 'Terrain ajouté avec succès'</script>");
+                
+            }
+            catch(Exception error)
             {
                 Console.WriteLine(error.Message);
             }

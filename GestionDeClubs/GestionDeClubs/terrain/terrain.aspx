@@ -3,10 +3,20 @@
     <h1>Gestion des terrains</h1>
     <div>
         <h3>Ajouter un terrain</h3>
+        
         <div>
+            <span id="massageValidate"></span>
+            <p>
+                <asp:TextBox runat="server" ID="nameTerrain"    placeholder="Nome du terrain"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="requireName"
+                    ControlToValidate="nameTerrain"
+                    ErrorMessage="Le nom du terrain est obligatoire"
+                    ForeColor="Red" ></asp:RequiredFieldValidator>
+                
+            </p>
             <p>
                 <asp:TextBox runat="server" ID="addressTerrain" placeholder="Adresse du terrain"></asp:TextBox>
-                <asp:RequiredFieldValidator runat="server" ID="requireAdresse"
+                <asp:RequiredFieldValidator runat="server" ID="requireAddress"
                     ControlToValidate="addressTerrain"
                     ErrorMessage="L'adresse est obligatoire"
                     ForeColor="Red" ></asp:RequiredFieldValidator>
