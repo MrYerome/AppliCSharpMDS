@@ -70,10 +70,10 @@
     <EntitySetMapping Name="Terrain">
       <EntityTypeMapping TypeName="ClubFootModel.Terrain">
         <MappingFragment StoreEntitySet="Terrain">
-          <ScalarProperty Name="nom" ColumnName="nom" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="adresse" ColumnName="adresse" />
           <ScalarProperty Name="id_Club" ColumnName="id_Club" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

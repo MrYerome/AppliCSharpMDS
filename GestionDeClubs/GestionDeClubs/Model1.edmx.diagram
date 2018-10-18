@@ -4,16 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="001511a4435e4e65b36664c545d3fd38" Name="Diagram1">
-        <EntityTypeShape EntityType="ClubFootModel.Club" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ClubFootModel.Entrainement" Width="2.75" PointX="3" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ClubFootModel.EntrainementClubTerrain" Width="2.75" PointX="5.25" PointY="11.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ClubFootModel.Matchs" Width="1.5" PointX="6" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ClubFootModel.MatchsClubTerrain" Width="1.5" PointX="8.25" PointY="11.375" IsExpanded="true" />
+      <Diagram DiagramId="fac375b534644cfd84a3a9ebf14e7587" Name="Diagram1">
+        <EntityTypeShape EntityType="ClubFootModel.Club" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClubFootModel.Entrainement" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClubFootModel.EntrainementClubTerrain" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClubFootModel.Matchs" Width="1.5" PointX="6" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClubFootModel.MatchsClubTerrain" Width="1.5" PointX="8.25" PointY="11.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ClubFootModel.Produit" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ClubFootModel.Statut" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClubFootModel.Statut" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ClubFootModel.Terrain" Width="1.5" PointX="3" PointY="15.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ClubFootModel.Users" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClubFootModel.Users" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
         <AssociationConnector Association="ClubFootModel.EntrainementClubTerrain_Club_FK" ManuallyRouted="false" />
         <AssociationConnector Association="ClubFootModel.MatchsClubTerrain_Club_FK" ManuallyRouted="false" />
         <AssociationConnector Association="ClubFootModel.Produit_Club_FK" ManuallyRouted="false" />

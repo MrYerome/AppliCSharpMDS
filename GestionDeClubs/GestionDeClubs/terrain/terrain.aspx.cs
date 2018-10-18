@@ -15,7 +15,7 @@ namespace GestionDeClubs.terrain
         protected void Page_Load(object sender, EventArgs e)
         {
 #if DEBUG
-            Users user = entities.Users.FirstOrDefault(x => x.identifiant == "cgouin" && x.password == "password");
+            Users user = entities.Users.FirstOrDefault(x => x.identifiant == "admin" && x.password == "admin");
             Page.Session["userConnected"] = user;
 #endif
             if (Page.Session["userConnected"] != null)
