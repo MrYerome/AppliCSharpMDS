@@ -21,7 +21,20 @@ namespace GestionDeClubs
         }
 
         public List<DropDownList> GetDDLClubs() {
-             return null;
+            ClubFootEntities context = new ClubFootEntities();
+
+            List<DropDownList> DDLClubs = new List<DropDownList>();
+            var obj = context.Club.Select(c => c.nom).ToList();
+            if (obj != null && obj.Count() > 0)
+            {
+                foreach (var data in obj)
+                {
+                    DropDownList model = new DropDownList();
+                    DDLClubs.Add(model);
+                }
+                return DDLClubs;
+            }
+            else return null;
         }
         protected void ValidateUser(object sender, EventArgs e)
         {
