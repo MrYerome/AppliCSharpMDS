@@ -10,7 +10,7 @@
 namespace GestionDeClubs {
     
     
-    public partial class crudClub {
+    public partial class addClub {
         
         /// <summary>
         /// Contrôle clubName.

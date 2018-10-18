@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 
 namespace GestionDeClubs
 {
-    public partial class crudClub : Page
+    public partial class addClub : Page
     {
 
         private ClubFootEntities db = new ClubFootEntities();
@@ -21,7 +21,7 @@ namespace GestionDeClubs
         }
 
 
-       protected void addClub(object sender, EventArgs e)
+       protected void addClubAction(object sender, EventArgs e)
         {
             db = new ClubFootEntities();
             Club c = new Club();

@@ -114,7 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="crudClub.aspx" />
+    <Content Include="addClub.aspx" />
     <Content Include="Ajouter.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -187,12 +187,12 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="crudClub.aspx.cs">
-      <DependentUpon>crudClub.aspx</DependentUpon>
+    <Compile Include="addClub.aspx.cs">
+      <DependentUpon>addClub.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="crudClub.aspx.designer.cs">
-      <DependentUpon>crudClub.aspx</DependentUpon>
+    <Compile Include="addClub.aspx.designer.cs">
+      <DependentUpon>addClub.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">

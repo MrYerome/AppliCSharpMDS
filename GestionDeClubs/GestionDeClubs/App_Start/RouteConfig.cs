@@ -14,9 +14,14 @@ namespace GestionDeClubs
             settings.AutoRedirectMode = RedirectMode.Permanent;
             routes.EnableFriendlyUrls(settings);
 
+            /* ROUTE UPDATECLUB */
             routes.MapPageRoute("updateClub",
             "majClub/{idClub}",
             "~/updateClub.aspx");
+
+
+
+
         }
     }
 }

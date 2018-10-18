@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Ajouter un club" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="crudClub.aspx.cs" Inherits="GestionDeClubs.crudClub" %>
+﻿<%@ Page Title="Ajouter un club" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="addClub.aspx.cs" Inherits="GestionDeClubs.addClub" %>
 
 
 
