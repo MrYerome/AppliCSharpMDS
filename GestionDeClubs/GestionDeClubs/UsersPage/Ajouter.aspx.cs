@@ -34,7 +34,8 @@ namespace GestionDeClubs.UsersPage
             u.nom = name.Text;
             u.prenom = surname.Text;
             u.id_Statut = 1;
-            u.id_Club = 1;
+            u.id_Club = int.Parse(DDLClubs.SelectedValue);
+                u.poste = poste.Text;
             u.identifiant = identifiant.Text;
             u.password = password.Text;
             

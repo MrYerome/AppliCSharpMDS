@@ -114,7 +114,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Ajouter.aspx" />
     <Content Include="connexion\connexion.aspx" />
     <Content Include="connexion\deconnexion.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -185,6 +184,7 @@
     <Content Include="Site.Master" />
     <Content Include="terrain\terrain.aspx" />
     <Content Include="UsersPage\Ajouter.aspx" />
+    <Content Include="UsersPage\listUsers.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -200,13 +200,6 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Ajouter.aspx.cs">
-      <DependentUpon>Ajouter.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Ajouter.aspx.designer.cs">
-      <DependentUpon>Ajouter.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Club.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -315,6 +308,13 @@
     </Compile>
     <Compile Include="UsersPage\Ajouter.aspx.designer.cs">
       <DependentUpon>Ajouter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersPage\listUsers.aspx.cs">
+      <DependentUpon>listUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersPage\listUsers.aspx.designer.cs">
+      <DependentUpon>listUsers.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

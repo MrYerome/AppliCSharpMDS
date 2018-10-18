@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ClubFootModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ClubFootModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Club">
           <Key>
             <PropertyRef Name="id" />
@@ -85,6 +85,7 @@
           <Property Name="identifiant" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="password" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="id_Club" Type="int" Nullable="false" />
+          <Property Name="poste" Type="varchar" MaxLength="255" />
         </EntityType>
         <Association Name="EntrainementClubTerrain_Club_FK">
           <End Role="Club" Type="Self.Club" Multiplicity="1" />
@@ -257,8 +258,7 @@
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ClubFootModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -362,6 +362,7 @@
           <Property Name="id_Club" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Club" Relationship="Self.Users_Club_FK" FromRole="Users" ToRole="Club" />
           <NavigationProperty Name="Statut" Relationship="Self.Users_Statut_FK" FromRole="Users" ToRole="Statut" />
+          <Property Name="poste" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="EntrainementClubTerrain_Club_FK">
           <End Role="Club" Type="Self.Club" Multiplicity="1" />
@@ -619,6 +620,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="ClubFootModel.Users">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="poste" ColumnName="poste" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nom" ColumnName="nom" />
                 <ScalarProperty Name="prenom" ColumnName="prenom" />

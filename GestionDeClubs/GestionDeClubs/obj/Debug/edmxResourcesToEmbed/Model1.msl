@@ -80,6 +80,7 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="ClubFootModel.Users">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="poste" ColumnName="poste" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="nom" ColumnName="nom" />
           <ScalarProperty Name="prenom" ColumnName="prenom" />

@@ -22,20 +22,27 @@
         ErrorMessage="Veuillez renseigner votre prénom"
         ForeColor="Red">
     </asp:RequiredFieldValidator><br />
-        <asp:Label runat="server">Votre prénom : </asp:Label>
-    <asp:TextBox ID="email" runat="server"></asp:TextBox>
+
+        <asp:Label runat="server">Votre mail : </asp:Label>
+    <asp:TextBox textmode="Email" ID="email" runat="server"></asp:TextBox>
     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server"
         ControlToValidate="email"
         ErrorMessage="Veuillez renseigner votre mail"
         ForeColor="Red">
     </asp:RequiredFieldValidator><br />
+
+            <asp:Label runat="server">Votre poste : </asp:Label>
+    <asp:TextBox ID="poste" runat="server"></asp:TextBox>
+<br />
+
     <asp:Label runat="server">Votre identifiant : </asp:Label>
-    <asp:TextBox ID="identifiant" runat="server"></asp:TextBox>
+    <asp:TextBox textmode="Password" ID="identifiant" runat="server"></asp:TextBox>
     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
         ControlToValidate="identifiant"
         ErrorMessage="Veuillez renseigner votre identifiant"
         ForeColor="Red">
     </asp:RequiredFieldValidator><br />
+
     <asp:Label runat="server">Votre mot de passe : </asp:Label>
     <asp:TextBox ID="password" runat="server"></asp:TextBox>
     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"

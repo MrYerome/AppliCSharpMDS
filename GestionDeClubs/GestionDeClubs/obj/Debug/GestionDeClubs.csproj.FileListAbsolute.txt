@@ -75,3 +75,4 @@ C:\Users\Jerome Vinet\Documents\FormationMDS\Projets\P1CSharp\AppliCSharpMDS\App
 C:\Users\Jerome Vinet\Documents\FormationMDS\Projets\P1CSharp\AppliCSharpMDS\AppliCSharpMDS\GestionDeClubs\GestionDeClubs\obj\Debug\GestionDeClubs.csproj.CopyComplete
 C:\Users\Jerome Vinet\Documents\FormationMDS\Projets\P1CSharp\AppliCSharpMDS\AppliCSharpMDS\GestionDeClubs\GestionDeClubs\obj\Debug\GestionDeClubs.dll
 C:\Users\Jerome Vinet\Documents\FormationMDS\Projets\P1CSharp\AppliCSharpMDS\AppliCSharpMDS\GestionDeClubs\GestionDeClubs\obj\Debug\GestionDeClubs.pdb
+C:\Users\Jerome Vinet\Documents\FormationMDS\Projets\P1CSharp\AppliCSharpMDS\AppliCSharpMDS\GestionDeClubs\GestionDeClubs\obj\Debug\GestionDeClubs.csprojAssemblyReference.cache
