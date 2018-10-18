@@ -5,7 +5,7 @@
             <h3>Ajouter un terrain</h3>
             <div>
                 <asp:TextBox runat="server" ID="addressTerrain" placeholder="Adresse du terrain"></asp:TextBox>
-                <asp:DropDownList runat="server" ID="_dropDownListClub" ></asp:DropDownList>
+                <asp:Button runat="server" ID="addTerrain" Text="Ajouter" OnClick="addTerrain_Click" />
             </div>
         </div>
 </asp:Content>

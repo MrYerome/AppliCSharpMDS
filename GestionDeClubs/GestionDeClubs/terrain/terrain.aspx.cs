@@ -11,15 +11,20 @@ namespace GestionDeClubs.terrain
     public partial class addTerrain : Page
     {
         private ClubFootEntities entities = new ClubFootEntities();
+        private Users userConnected = new Users();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Page.Session["userConnected"] != null)
+            {
+                userConnected = (Users)Page.Session["userConnected"];
+            }
+        }
+
+        protected void addTerrain_Click(object sender, EventArgs e)
+        {
+            Terrain terrain = new Terrain();
             
-            List<Club> clubs = entities.Club.ToList();
-            _dropDownListClub.DataSource = clubs;
-            _dropDownListClub.DataValueField = "id";
-            _dropDownListClub.DataTextField = "nom";
-            _dropDownListClub.DataBind();
-                
+
         }
     }
 }

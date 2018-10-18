@@ -22,12 +22,12 @@ namespace GestionDeClubs.terrain {
         protected global::System.Web.UI.WebControls.TextBox addressTerrain;
         
         /// <summary>
-        /// Contrôle _dropDownListClub.
+        /// Contrôle addTerrain.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList _dropDownListClub;
+        protected global::System.Web.UI.WebControls.Button addTerrain;
     }
 }
