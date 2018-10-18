@@ -6,8 +6,8 @@
     <edmx:Diagrams>
       <Diagram DiagramId="001511a4435e4e65b36664c545d3fd38" Name="Diagram1">
         <EntityTypeShape EntityType="ClubFootModel.Club" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ClubFootModel.Entrainement" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ClubFootModel.EntrainementClubTerrain" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClubFootModel.Entrainement" Width="2.75" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClubFootModel.EntrainementClubTerrain" Width="2.75" PointX="5.25" PointY="11.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ClubFootModel.Matchs" Width="1.5" PointX="6" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ClubFootModel.MatchsClubTerrain" Width="1.5" PointX="8.25" PointY="11.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ClubFootModel.Produit" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
