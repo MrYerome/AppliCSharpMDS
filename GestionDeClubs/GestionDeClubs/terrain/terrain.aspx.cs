@@ -40,12 +40,14 @@ namespace GestionDeClubs.terrain
                 saveChanges();
                 nameTerrain.Text = "";
                 addressTerrain.Text = "";
-                messageValidateOK.Attributes["class"] = "visible alert alert-success";
+                messageValidate.InnerText = "Le terrain ajouté avec succès";
+                messageValidate.Attributes["class"] = "visible alert alert-success";
 
             }
             catch (Exception)
             {
-                messageValidateKO.Attributes["class"] = "visible alert alert-danger";
+                messageValidate.InnerText = "Erreur: le terrain n'a pas été ajouté";
+                messageValidate.Attributes["class"] = "visible alert alert-danger";
             }
         }
 
