@@ -5,17 +5,21 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>
     <asp:Label runat="server">Votre nom : </asp:Label>
-    <asp:TextBox ID="identifiant" runat="server" Text="Votre identifiant"></asp:TextBox>
-            <asp:Label runat="server">Votre nom : </asp:Label>
-        <asp:TextBox ID="TextBox2" runat="server" Text="Votre identifiant"></asp:TextBox>    
-    <asp:Label runat="server">Votre nom : </asp:Label>
-        <asp:TextBox ID="TextBox1" runat="server" Text="Votre identifiant"></asp:TextBox>
-        <asp:TextBox ID="password" runat="server" Text="Votre mot de passe"></asp:TextBox>
-    <asp:DropDownList ID="DDLClubs" runat="server">
+        <asp:TextBox ID="name" runat="server"></asp:TextBox>
 
-</asp:DropDownList>
-    <asp:Button runat="server" ID="submitForm" Text="Valider" onclick="ValidateUser"/>
-    
+    <asp:Label runat="server">Votre prénom : </asp:Label>
+    <asp:TextBox ID="surname" runat="server"></asp:TextBox>
+
+        <asp:Label runat="server">Votre identifiant : </asp:Label>
+    <asp:TextBox ID="identifiant" runat="server"></asp:TextBox>
+            <asp:Label runat="server">Votre mot de passe : </asp:Label>
+    <asp:TextBox ID="password" runat="server"></asp:TextBox>
+
+
+    <asp:DropDownList ID="DDLClubs" runat="server">
+    </asp:DropDownList>
+    <asp:Button runat="server" ID="submitForm" Text="Valider" OnClick="ValidateUser" />
+
 
 
 </asp:Content>
