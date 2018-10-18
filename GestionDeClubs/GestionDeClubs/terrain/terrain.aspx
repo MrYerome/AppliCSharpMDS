@@ -12,7 +12,7 @@
                         ForeColor="Red" ></asp:RequiredFieldValidator>
                 </p>
                 
-                <asp:DropDownList runat="server" ID="_dropDownListClub" ></asp:DropDownList>
+                <asp:Button runat="server" ID="addTerrainButton" OnClick="addTerrainButton_Click" />
             </div>
         </div>
 </asp:Content>
