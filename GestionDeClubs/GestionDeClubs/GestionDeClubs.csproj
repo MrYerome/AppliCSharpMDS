@@ -123,6 +123,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="EntrainementPage\AddEntrainement.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -138,6 +139,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Match\AddMatch.aspx" />
     <Content Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
@@ -235,6 +237,13 @@
     <Compile Include="EntrainementClubTerrain.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="EntrainementPage\AddEntrainement.aspx.cs">
+      <DependentUpon>AddEntrainement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EntrainementPage\AddEntrainement.aspx.designer.cs">
+      <DependentUpon>AddEntrainement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -243,6 +252,13 @@
     </Compile>
     <Compile Include="MatchsClubTerrain.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Match\AddMatch.aspx.cs">
+      <DependentUpon>AddMatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Match\AddMatch.aspx.designer.cs">
+      <DependentUpon>AddMatch.aspx</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
