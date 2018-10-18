@@ -31,7 +31,6 @@ namespace GestionDeClubs
                 {
                     DropDownList model = new DropDownList();
                     DDLClubs.Add(model);
-                    DDLClubs.Add(data); 
                 }
                 return DDLClubs;
             }
