@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace GestionDeClubs.terrain
 {
-    public partial class addTerrain : Page
+    public partial class terrain : Page
     {
         private ClubFootEntities entities = new ClubFootEntities();
         private Users userConnected = new Users();
@@ -22,8 +22,19 @@ namespace GestionDeClubs.terrain
 
         protected void addTerrain_Click(object sender, EventArgs e)
         {
-            Terrain terrain = new Terrain();
-            
+            try
+            {
+                Terrain terrain = new Terrain();
+                terrain.adresse = addressTerrain.Text;
+                terrain.Club = userConnected.Club;
+                entities.Terrain.Add(terrain);
+            }
+            catch(Exception error)
+            {
+               Console.Write(error.Message);
+            }
+
+
 
         }
     }
