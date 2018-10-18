@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Connexion" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="connexion.aspx.cs" Inherits="GestionDeClubs.connexion.connexion" %>
+<%@ Page Title="Connexion" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="connexion.aspx.cs" Inherits="GestionDeClubs.connexion.connexion" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Connexion</h1>
 
