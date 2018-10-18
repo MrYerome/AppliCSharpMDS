@@ -66,6 +66,7 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="adresse" Type="varchar" MaxLength="80" />
     <Property Name="id_Club" Type="int" Nullable="false" />
+    <Property Name="nom" Type="varchar" MaxLength="255" />
   </EntityType>
   <EntityType Name="Users">
     <Key>

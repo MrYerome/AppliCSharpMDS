@@ -84,6 +84,7 @@
     <NavigationProperty Name="Club" Relationship="Self.Terrain_Club_FK" FromRole="Terrain" ToRole="Club" />
     <NavigationProperty Name="EntrainementClubTerrain" Relationship="Self.EntrainementClubTerrain_Terrain1_FK" FromRole="Terrain" ToRole="EntrainementClubTerrain" />
     <NavigationProperty Name="MatchsClubTerrain" Relationship="Self.MatchsClubTerrain_Terrain1_FK" FromRole="Terrain" ToRole="MatchsClubTerrain" />
+    <Property Name="nom" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Users">
     <Key>

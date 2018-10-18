@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace GestionDeClubs.terrain
 {
-    public partial class addTerrain : Page
+    public partial class terrain : Page
     {
         private ClubFootEntities entities = new ClubFootEntities();
         protected void Page_Load(object sender, EventArgs e)

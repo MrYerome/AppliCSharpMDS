@@ -21,7 +21,7 @@ namespace GestionDeClubs
         }
 
         public void GetDDLClubs() {
-            DDLClubs.DataSource = db.Club;
+            DDLClubs.DataSource = db.Club.ToList();
             DDLClubs.DataTextField = "nom";
             DDLClubs.DataValueField = "id";
             DDLClubs.DataBind();
