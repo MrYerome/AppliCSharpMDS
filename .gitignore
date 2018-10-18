@@ -1,3 +1,9 @@
 GestionDeClubs/.vs/GestionDeClubs/v15/Server/sqlite3/storage.ide-wal
 GestionDeClubs/.vs/GestionDeClubs/v15/Server/sqlite3/storage.ide-shm
 GestionDeClubs/.vs/GestionDeClubs/v15/Server/sqlite3/storage.ide
+**.suo
+GestionDeClubs/.vs/GestionDeClubs/v15/Server/sqlite3/storage.ide-shm
+GestionDeClubs/GestionDeClubs.Tests/obj/Debug/**
+GestionDeClubs/.vs/GestionDeClubs/v15/Server/sqlite3/storage.ide-shm
+GestionDeClubs/.vs/GestionDeClubs/v15/Server/**
+

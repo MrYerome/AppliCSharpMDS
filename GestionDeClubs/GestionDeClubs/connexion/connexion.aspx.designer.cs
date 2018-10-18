@@ -1,10 +1,10 @@
-ï»¿//------------------------------------------------------------------------------
-// <gÃ©nÃ©rÃ© automatiquement>
-//     Ce code a Ã©tÃ© gÃ©nÃ©rÃ© par un outil.
+//------------------------------------------------------------------------------
+// <généré automatiquement>
+//     Ce code a été généré par un outil.
 //
-//     Les modifications apportÃ©es Ã  ce fichier peuvent provoquer un comportement incorrect et seront perdues si
-//     le code est rÃ©gÃ©nÃ©rÃ©.
-// </gÃ©nÃ©rÃ© automatiquement>
+//     Les modifications apportées à ce fichier peuvent provoquer un comportement incorrect et seront perdues si
+//     le code est régénéré.
+// </généré automatiquement>
 //------------------------------------------------------------------------------
 
 namespace GestionDeClubs.connexion {
@@ -13,29 +13,29 @@ namespace GestionDeClubs.connexion {
     public partial class connexion {
         
         /// <summary>
-        /// ContrÃ´le login.
+        /// Contrôle login.
         /// </summary>
         /// <remarks>
-        /// Champ gÃ©nÃ©rÃ© automatiquement.
-        /// Pour modifier, dÃ©placez la dÃ©claration de champ du fichier de concepteur dans le fichier code-behind.
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox login;
         
         /// <summary>
-        /// ContrÃ´le password.
+        /// Contrôle password.
         /// </summary>
         /// <remarks>
-        /// Champ gÃ©nÃ©rÃ© automatiquement.
-        /// Pour modifier, dÃ©placez la dÃ©claration de champ du fichier de concepteur dans le fichier code-behind.
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox password;
         
         /// <summary>
-        /// ContrÃ´le validateConnexion.
+        /// Contrôle validateConnexion.
         /// </summary>
         /// <remarks>
-        /// Champ gÃ©nÃ©rÃ© automatiquement.
-        /// Pour modifier, dÃ©placez la dÃ©claration de champ du fichier de concepteur dans le fichier code-behind.
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button validateConnexion;
     }
