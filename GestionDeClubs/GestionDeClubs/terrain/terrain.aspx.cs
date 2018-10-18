@@ -40,12 +40,12 @@ namespace GestionDeClubs.terrain
                 saveChanges();
                 nameTerrain.Text = "";
                 addressTerrain.Text = "";
-                Page.Response.Write("<script>$('#massageValidate').text = 'Terrain ajouté avec succès'</script>");
-                
+                messageValidateOK.Attributes["class"] = "visible alert alert-success";
+
             }
-            catch(Exception error)
+            catch (Exception)
             {
-                Console.WriteLine(error.Message);
+                messageValidateKO.Attributes["class"] = "visible alert alert-danger";
             }
         }
 

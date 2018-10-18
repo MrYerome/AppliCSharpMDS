@@ -5,7 +5,8 @@
         <h3>Ajouter un terrain</h3>
         
         <div>
-            <span id="massageValidate"></span>
+            <div runat="server" id="messageValidateOK" class="hidden">Le terrain ajouté avec succès</div>
+            <div runat="server" id="messageValidateKO" class="hidden">Erreur : le terrain n'a pas été ajouté</div>
             <p>
                 <asp:TextBox runat="server" ID="nameTerrain"    placeholder="Nome du terrain"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server" ID="requireName"
