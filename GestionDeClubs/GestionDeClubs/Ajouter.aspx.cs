@@ -17,8 +17,6 @@ namespace GestionDeClubs
         private ClubFootEntities db = new ClubFootEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
-
-
             GetDDLClubs();
         }
 
