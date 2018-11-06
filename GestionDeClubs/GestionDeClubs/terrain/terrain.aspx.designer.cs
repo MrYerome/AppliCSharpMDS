@@ -22,6 +22,15 @@ namespace GestionDeClubs.terrain {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl messageValidate;
         
         /// <summary>
+        /// Contrôle idTerrain.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField idTerrain;
+        
+        /// <summary>
         /// Contrôle nameTerrain.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,24 @@ namespace GestionDeClubs.terrain {
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button addTerrainButton;
+        
+        /// <summary>
+        /// Contrôle modifTerrainButton.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button modifTerrainButton;
+        
+        /// <summary>
+        /// Contrôle suppTerrainButton.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button suppTerrainButton;
         
         /// <summary>
         /// Contrôle gridViewTerrain.

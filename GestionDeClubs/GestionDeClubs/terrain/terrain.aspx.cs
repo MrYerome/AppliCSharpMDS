@@ -12,6 +12,7 @@ namespace GestionDeClubs.terrain
     {
         private ClubFootEntities entities = new ClubFootEntities();
         private Users userConnected = new Users();
+        protected Terrain selectedTerrain;
         protected void Page_Load(object sender, EventArgs e)
         {
 #if DEBUG
@@ -24,7 +25,7 @@ namespace GestionDeClubs.terrain
                 if (!IsPostBack)
                 {
                     loadDatagrid();
-
+                    
                 }
             }
             else
@@ -48,16 +49,13 @@ namespace GestionDeClubs.terrain
                 terrain.Club = userConnected.Club;
                 entities.Terrain.Add(terrain);
                 saveChanges();
-                nameTerrain.Text = "";
-                addressTerrain.Text = "";
-                messageValidate.InnerText = "Le terrain ajouté avec succès";
-                messageValidate.Attributes["class"] = "visible alert alert-success";
+                emptyForm();
+                messageValidation(true, "Le terrain ajouté avec succès");
 
             }
             catch (Exception)
             {
-                messageValidate.InnerText = "Erreur: le terrain n'a pas été ajouté";
-                messageValidate.Attributes["class"] = "visible alert alert-danger";
+                messageValidation(false, "Erreur: le terrain n'a pas été ajouté");
             }
         }
 
@@ -66,8 +64,6 @@ namespace GestionDeClubs.terrain
         /// </summary>
         protected void loadDatagrid()
         {
-
-
             gridViewTerrain.DataSource = entities.Terrain.ToList();
             gridViewTerrain.DataBind();
         }
@@ -77,49 +73,92 @@ namespace GestionDeClubs.terrain
             entities.SaveChanges();
         }
 
-        protected void gridViewTerrain_RowEditing(object sender, GridViewEditEventArgs e)
+        protected void emptyForm()
         {
-            gridViewTerrain.EditIndex = e.NewEditIndex;
-            loadDatagrid();
-
+            nameTerrain.Text = "";
+            addressTerrain.Text = "";
         }
 
-        protected void gridViewTerrain_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        protected void gridViewTerrain_SelectedIndexChanged(object sender, EventArgs e)
         {
-            gridViewTerrain.EditIndex = -1;
-            loadDatagrid();
+            GridViewRow row = gridViewTerrain.SelectedRow;
+
+            int selectedTerrainId = Convert.ToInt32(gridViewTerrain.DataKeys[row.RowIndex].Value.ToString());
+            selectedTerrain = new Terrain();
+            selectedTerrain = entities.Terrain.FirstOrDefault(t => t.id == selectedTerrainId);
+
+            loadFormModif(selectedTerrain);
         }
 
-        protected void gridViewTerrain_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        protected void loadFormModif(Terrain t)
         {
-            int terrainId = Convert.ToInt32(gridViewTerrain.DataKeys[e.RowIndex].Value.ToString());
-            GridViewRow row = (GridViewRow)gridViewTerrain.Rows[e.RowIndex];
+            idTerrain.Value = t.id.ToString();
+            nameTerrain.Text = t.nom;
+            addressTerrain.Text = t.adresse;
+        }
 
-            TextBox textName = (TextBox)row.Cells[0].Controls[0];
-            TextBox textadd = (TextBox)row.Cells[1].Controls[0];
-
-            Terrain terrain = entities.Terrain.FirstOrDefault(x => x.id == terrainId);
-            if(terrain != null)
+        protected void modifTerrainButton_Click(object sender, EventArgs e)
+        {
+            try
             {
-                terrain.nom = textName.Text;
-                terrain.adresse = textadd.Text;
-                try
-                {
-                    saveChanges();
-                    messageValidate.InnerText = "Terrain modifié avec succès";
-                    messageValidate.Attributes["class"] = "visible alert alert-success";
-                }
-                catch (Exception)
-                {
-                    messageValidate.InnerText = "Erreur: le terrain n'a pas été modifié";
-                    messageValidate.Attributes["class"] = "visible alert alert-danger";
-                }
+                int idSelectedTerrain = Convert.ToInt32(idTerrain.Value);
+
+                selectedTerrain = entities.Terrain.FirstOrDefault(t => t.id == idSelectedTerrain);
+
+                selectedTerrain.nom = nameTerrain.Text;
+                selectedTerrain.adresse = addressTerrain.Text;
+
+                saveChanges();
+                emptyForm();
+
+                messageValidation(true, "Le terrain modifié avec succès");
+                loadDatagrid();
+                selectedTerrain = null;
+            }
+            catch (Exception)
+            {
+                messageValidation(false, "Erreur: le terrain n'a pas été modifié");
+                selectedTerrain = null;
+            }
+
+        }
+
+        protected void suppTerrainButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int idSelectedTerrain = Convert.ToInt32(idTerrain.Value);
+                selectedTerrain = entities.Terrain.FirstOrDefault(t => t.id == idSelectedTerrain);
+
+                entities.Terrain.Remove(selectedTerrain);
+                saveChanges();
+                emptyForm();
+
+                messageValidation(true, "Le terrain a été supprimé avec succès");
+
+                loadDatagrid();
+                selectedTerrain = null;
+            }
+            catch (Exception)
+            {
+                messageValidation(false, "Erreur : Le terrain n'a pas été modifié");
+                    selectedTerrain = null;
             }
             
+        }
 
-            gridViewTerrain.EditIndex = -1;
-
-            loadDatagrid();
+       protected void messageValidation(bool status, string message)
+        {
+            if (status)
+            {
+                messageValidate.InnerText = message;
+                messageValidate.Attributes["class"] = "alert alert-success alert-dismissible fade show";
+            }
+            else
+            {
+                messageValidate.InnerText = message;
+                messageValidate.Attributes["class"] = "alert alert-danger alert-dismissible fade show";
+            }
         }
     }
 }
