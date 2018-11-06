@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ClubFootModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Club">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="adresse" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="codePostal" Type="Int32" />
+    <Property Name="ville" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="EntrainementClubTerrain" Relationship="Self.EntrainementClubTerrain_Club_FK" FromRole="Club" ToRole="EntrainementClubTerrain" />
+    <NavigationProperty Name="MatchsClubTerrain" Relationship="Self.MatchsClubTerrain_Club_FK" FromRole="Club" ToRole="MatchsClubTerrain" />
+    <NavigationProperty Name="Produit" Relationship="Self.Produit_Club_FK" FromRole="Club" ToRole="Produit" />
+    <NavigationProperty Name="Terrain" Relationship="Self.Terrain_Club_FK" FromRole="Club" ToRole="Terrain" />
+    <NavigationProperty Name="Users" Relationship="Self.Users_Club_FK" FromRole="Club" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Entrainement">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="EntrainementClubTerrain" Relationship="Self.EntrainementClubTerrain_Entrainement_FK" FromRole="Entrainement" ToRole="EntrainementClubTerrain" />
+  </EntityType>
+  <EntityType Name="EntrainementClubTerrain">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="id_Entrainement" Type="Int32" Nullable="false" />
+    <Property Name="id_Terrain" Type="Int32" Nullable="false" />
+    <Property Name="id_Club" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Club" Relationship="Self.EntrainementClubTerrain_Club_FK" FromRole="EntrainementClubTerrain" ToRole="Club" />
+    <NavigationProperty Name="Entrainement" Relationship="Self.EntrainementClubTerrain_Entrainement_FK" FromRole="EntrainementClubTerrain" ToRole="Entrainement" />
+    <NavigationProperty Name="Terrain" Relationship="Self.EntrainementClubTerrain_Terrain1_FK" FromRole="EntrainementClubTerrain" ToRole="Terrain" />
+  </EntityType>
+  <EntityType Name="Matchs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="MatchsClubTerrain" Relationship="Self.MatchsClubTerrain_Match0_FK" FromRole="Matchs" ToRole="MatchsClubTerrain" />
+  </EntityType>
+  <EntityType Name="MatchsClubTerrain">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="id_Matchs" Type="Int32" Nullable="false" />
+    <Property Name="id_Terrain" Type="Int32" Nullable="false" />
+    <Property Name="id_Club" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Club" Relationship="Self.MatchsClubTerrain_Club_FK" FromRole="MatchsClubTerrain" ToRole="Club" />
+    <NavigationProperty Name="Matchs" Relationship="Self.MatchsClubTerrain_Match0_FK" FromRole="MatchsClubTerrain" ToRole="Matchs" />
+    <NavigationProperty Name="Terrain" Relationship="Self.MatchsClubTerrain_Terrain1_FK" FromRole="MatchsClubTerrain" ToRole="Terrain" />
+  </EntityType>
+  <EntityType Name="Produit">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nom" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="prix" Type="Double" />
+    <Property Name="id_Club" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Club" Relationship="Self.Produit_Club_FK" FromRole="Produit" ToRole="Club" />
+  </EntityType>
+  <EntityType Name="Statut">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="label" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Users" Relationship="Self.Users_Statut_FK" FromRole="Statut" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Terrain">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adresse" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="id_Club" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Club" Relationship="Self.Terrain_Club_FK" FromRole="Terrain" ToRole="Club" />
+    <NavigationProperty Name="EntrainementClubTerrain" Relationship="Self.EntrainementClubTerrain_Terrain1_FK" FromRole="Terrain" ToRole="EntrainementClubTerrain" />
+    <NavigationProperty Name="MatchsClubTerrain" Relationship="Self.MatchsClubTerrain_Terrain1_FK" FromRole="Terrain" ToRole="MatchsClubTerrain" />
+    <Property Name="nom" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="prenom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_Statut" Type="Int32" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="identifiant" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_Club" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Club" Relationship="Self.Users_Club_FK" FromRole="Users" ToRole="Club" />
+    <NavigationProperty Name="Statut" Relationship="Self.Users_Statut_FK" FromRole="Users" ToRole="Statut" />
+    <Property Name="poste" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="EntrainementClubTerrain_Club_FK">
+    <End Role="Club" Type="Self.Club" Multiplicity="1" />
+    <End Role="EntrainementClubTerrain" Type="Self.EntrainementClubTerrain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Club">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="EntrainementClubTerrain">
+        <PropertyRef Name="id_Club" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MatchsClubTerrain_Club_FK">
+    <End Role="Club" Type="Self.Club" Multiplicity="1" />
+    <End Role="MatchsClubTerrain" Type="Self.MatchsClubTerrain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Club">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="MatchsClubTerrain">
+        <PropertyRef Name="id_Club" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Produit_Club_FK">
+    <End Role="Club" Type="Self.Club" Multiplicity="1" />
+    <End Role="Produit" Type="Self.Produit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Club">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Produit">
+        <PropertyRef Name="id_Club" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Terrain_Club_FK">
+    <End Role="Club" Type="Self.Club" Multiplicity="1" />
+    <End Role="Terrain" Type="Self.Terrain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Club">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Terrain">
+        <PropertyRef Name="id_Club" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Users_Club_FK">
+    <End Role="Club" Type="Self.Club" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Club">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="id_Club" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EntrainementClubTerrain_Entrainement_FK">
+    <End Role="Entrainement" Type="Self.Entrainement" Multiplicity="1" />
+    <End Role="EntrainementClubTerrain" Type="Self.EntrainementClubTerrain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Entrainement">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="EntrainementClubTerrain">
+        <PropertyRef Name="id_Entrainement" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EntrainementClubTerrain_Terrain1_FK">
+    <End Role="Terrain" Type="Self.Terrain" Multiplicity="1" />
+    <End Role="EntrainementClubTerrain" Type="Self.EntrainementClubTerrain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Terrain">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="EntrainementClubTerrain">
+        <PropertyRef Name="id_Terrain" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MatchsClubTerrain_Match0_FK">
+    <End Role="Matchs" Type="Self.Matchs" Multiplicity="1" />
+    <End Role="MatchsClubTerrain" Type="Self.MatchsClubTerrain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Matchs">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="MatchsClubTerrain">
+        <PropertyRef Name="id_Matchs" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MatchsClubTerrain_Terrain1_FK">
+    <End Role="Terrain" Type="Self.Terrain" Multiplicity="1" />
+    <End Role="MatchsClubTerrain" Type="Self.MatchsClubTerrain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Terrain">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="MatchsClubTerrain">
+        <PropertyRef Name="id_Terrain" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Users_Statut_FK">
+    <End Role="Statut" Type="Self.Statut" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Statut">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="id_Statut" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ClubFootEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Club" EntityType="Self.Club" />
+    <EntitySet Name="Entrainement" EntityType="Self.Entrainement" />
+    <EntitySet Name="EntrainementClubTerrain" EntityType="Self.EntrainementClubTerrain" />
+    <EntitySet Name="Matchs" EntityType="Self.Matchs" />
+    <EntitySet Name="MatchsClubTerrain" EntityType="Self.MatchsClubTerrain" />
+    <EntitySet Name="Produit" EntityType="Self.Produit" />
+    <EntitySet Name="Statut" EntityType="Self.Statut" />
+    <EntitySet Name="Terrain" EntityType="Self.Terrain" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <AssociationSet Name="EntrainementClubTerrain_Club_FK" Association="Self.EntrainementClubTerrain_Club_FK">
+      <End Role="Club" EntitySet="Club" />
+      <End Role="EntrainementClubTerrain" EntitySet="EntrainementClubTerrain" />
+    </AssociationSet>
+    <AssociationSet Name="MatchsClubTerrain_Club_FK" Association="Self.MatchsClubTerrain_Club_FK">
+      <End Role="Club" EntitySet="Club" />
+      <End Role="MatchsClubTerrain" EntitySet="MatchsClubTerrain" />
+    </AssociationSet>
+    <AssociationSet Name="Produit_Club_FK" Association="Self.Produit_Club_FK">
+      <End Role="Club" EntitySet="Club" />
+      <End Role="Produit" EntitySet="Produit" />
+    </AssociationSet>
+    <AssociationSet Name="Terrain_Club_FK" Association="Self.Terrain_Club_FK">
+      <End Role="Club" EntitySet="Club" />
+      <End Role="Terrain" EntitySet="Terrain" />
+    </AssociationSet>
+    <AssociationSet Name="Users_Club_FK" Association="Self.Users_Club_FK">
+      <End Role="Club" EntitySet="Club" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="EntrainementClubTerrain_Entrainement_FK" Association="Self.EntrainementClubTerrain_Entrainement_FK">
+      <End Role="Entrainement" EntitySet="Entrainement" />
+      <End Role="EntrainementClubTerrain" EntitySet="EntrainementClubTerrain" />
+    </AssociationSet>
+    <AssociationSet Name="EntrainementClubTerrain_Terrain1_FK" Association="Self.EntrainementClubTerrain_Terrain1_FK">
+      <End Role="Terrain" EntitySet="Terrain" />
+      <End Role="EntrainementClubTerrain" EntitySet="EntrainementClubTerrain" />
+    </AssociationSet>
+    <AssociationSet Name="MatchsClubTerrain_Match0_FK" Association="Self.MatchsClubTerrain_Match0_FK">
+      <End Role="Matchs" EntitySet="Matchs" />
+      <End Role="MatchsClubTerrain" EntitySet="MatchsClubTerrain" />
+    </AssociationSet>
+    <AssociationSet Name="MatchsClubTerrain_Terrain1_FK" Association="Self.MatchsClubTerrain_Terrain1_FK">
+      <End Role="Terrain" EntitySet="Terrain" />
+      <End Role="MatchsClubTerrain" EntitySet="MatchsClubTerrain" />
+    </AssociationSet>
+    <AssociationSet Name="Users_Statut_FK" Association="Self.Users_Statut_FK">
+      <End Role="Statut" EntitySet="Statut" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

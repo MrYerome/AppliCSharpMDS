@@ -13,6 +13,24 @@ namespace GestionDeClubs.terrain {
     public partial class terrain {
         
         /// <summary>
+        /// Contrôle gestionTerrain.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl gestionTerrain;
+        
+        /// <summary>
+        /// Contrôle ContainerMessageValidate.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ContainerMessageValidate;
+        
+        /// <summary>
         /// Contrôle messageValidate.
         /// </summary>
         /// <remarks>
