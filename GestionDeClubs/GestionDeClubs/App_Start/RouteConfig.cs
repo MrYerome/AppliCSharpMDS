@@ -14,6 +14,8 @@ namespace GestionDeClubs
             settings.AutoRedirectMode = RedirectMode.Permanent;
             routes.EnableFriendlyUrls(settings);
 
+            routes.MapPageRoute("default", "default", "~/Default.aspx");
+
             /* ROUTE UPDATECLUB */
             routes.MapPageRoute("updateClub",
             "majClub/{idClub}",

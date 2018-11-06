@@ -134,6 +134,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="updateClub.aspx" />
+    <Content Include="readClub.aspx" />
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -274,6 +275,13 @@
     <Compile Include="Terrain.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="updateClub.aspx.cs">
+      <DependentUpon>updateClub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="updateClub.aspx.designer.cs">
+      <DependentUpon>updateClub.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -284,12 +292,12 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="updateClub.aspx.cs">
-      <DependentUpon>updateClub.aspx</DependentUpon>
+    <Compile Include="readClub.aspx.cs">
+      <DependentUpon>readClub.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="updateClub.aspx.designer.cs">
-      <DependentUpon>updateClub.aspx</DependentUpon>
+    <Compile Include="readClub.aspx.designer.cs">
+      <DependentUpon>readClub.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
