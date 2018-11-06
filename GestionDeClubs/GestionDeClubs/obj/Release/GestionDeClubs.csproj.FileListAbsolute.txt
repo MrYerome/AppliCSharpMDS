@@ -75,3 +75,4 @@ C:\Users\Christopher\ownCloud\AppliCSharpMDS\GestionDeClubs\GestionDeClubs\bin\f
 C:\Users\Christopher\ownCloud\AppliCSharpMDS\GestionDeClubs\GestionDeClubs\obj\Release\GestionDeClubs.csproj.CoreCompileInputs.cache
 C:\Users\Christopher\ownCloud\AppliCSharpMDS\GestionDeClubs\GestionDeClubs\obj\Release\GestionDeClubs.dll
 C:\Users\Christopher\ownCloud\AppliCSharpMDS\GestionDeClubs\GestionDeClubs\obj\Release\GestionDeClubs.pdb
+C:\Users\Christopher\ownCloud\AppliCSharpMDS\GestionDeClubs\GestionDeClubs\obj\Release\GestionDeClubs.csprojResolveAssemblyReference.cache

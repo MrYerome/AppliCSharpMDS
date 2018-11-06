@@ -316,6 +316,7 @@
     <Compile Include="UsersPage\Ajouter.aspx.designer.cs">
       <DependentUpon>Ajouter.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Util.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -57,11 +57,11 @@ namespace GestionDeClubs.terrain
                     saveChanges();
                     emptyForm();
                     loadDatagrid();
-                    messageValidation(true, true, "Le terrain ajouté avec succès");
+                    Util.alerteMessage(true, messageValidate, ContainerMessageValidate, true, "Le terrain ajouté avec succès");
                 }
                 else
                 {
-                    messageValidation(true, false, "Erreur: un terrain existe déjà avec ce nom");
+                    Util.alerteMessage(true, messageValidate, ContainerMessageValidate, false, "Erreur: un terrain existe déjà avec ce nom");
                 }
 
 
@@ -69,7 +69,7 @@ namespace GestionDeClubs.terrain
             }
             catch (Exception)
             {
-                messageValidation(true, false, "Erreur: le terrain n'a pas été ajouté");
+                Util.alerteMessage(true, messageValidate, ContainerMessageValidate, false, "Erreur: le terrain n'a pas été ajouté");
             }
         }
 
@@ -123,7 +123,7 @@ namespace GestionDeClubs.terrain
                 }
             }
 
-            messageValidation(false);
+            Util.alerteMessage(false, messageValidate, ContainerMessageValidate);
 
             int selectedTerrainId = Convert.ToInt32(gridViewTerrain.DataKeys[row.RowIndex].Value.ToString());
             selectedTerrain = new Terrain();
@@ -131,11 +131,17 @@ namespace GestionDeClubs.terrain
 
             loadFormModif(selectedTerrain);
         }
+
+        /// <summary>
+        /// Set the row click and tooltip
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void gridViewTerrain_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
-                if (hasRight())
+                if (Util.hasRight(new List<int>() { 1, 2 }, userConnected ))
                 {
                     
                     e.Row.Attributes["onclick"] = Page.ClientScript.GetPostBackClientHyperlink(gridViewTerrain, "Select$" + e.Row.RowIndex);
@@ -178,18 +184,18 @@ namespace GestionDeClubs.terrain
                     saveChanges();
                     emptyForm();
 
-                    messageValidation(true, true, "Le terrain modifié avec succès");
+                    Util.alerteMessage(true, messageValidate, ContainerMessageValidate, true, "Le terrain modifié avec succès");
                     loadDatagrid();
                     selectedTerrain = null;
                 }
                 else
                 {
-                    messageValidation(true, false, "Erreur: un terrain existe déjà avec ce nom");
+                    Util.alerteMessage(true, messageValidate, ContainerMessageValidate, false, "Erreur: un terrain existe déjà avec ce nom");
                 }
             }
             catch (Exception)
             {
-                messageValidation(true, false, "Erreur: le terrain n'a pas été modifié");
+                Util.alerteMessage(true, messageValidate, ContainerMessageValidate, false, "Erreur: le terrain n'a pas été modifié");
                
             }
 
@@ -211,41 +217,25 @@ namespace GestionDeClubs.terrain
                 saveChanges();
                 emptyForm();
 
-                messageValidation(true, true, "Le terrain a été supprimé avec succès");
+                Util.alerteMessage(true, messageValidate, ContainerMessageValidate, true, "Le terrain a été supprimé avec succès");
 
                 loadDatagrid();
                 selectedTerrain = null;
             }
             catch (Exception)
             {
-                messageValidation(true, false, "Erreur : Le terrain n'a pas été modifié");
+                Util.alerteMessage(true, messageValidate, ContainerMessageValidate, false, "Erreur : Le terrain n'a pas été modifié");
 
             }
             
         }
 
-       protected void messageValidation(bool isShow, bool status = true, string message = "")
-        {
-            if (isShow)
-            {
-                if (status)
-                {
-                    messageValidate.InnerText = message;
-                    ContainerMessageValidate.Attributes["class"] = "alert alert-success alert-dismissible show";
-                }
-                else
-                {
-                    messageValidate.InnerText = message;
-                    ContainerMessageValidate.Attributes["class"] = "alert alert-danger alert-dismissible show";
-                }
-            }
-            else
-            {
-                ContainerMessageValidate.Attributes["class"] = "hide";
-            }
 
-        }
-
+        /// <summary>
+        /// Check if a terrain already exist with this name
+        /// </summary>
+        /// <param name="nom"></param>
+        /// <returns></returns>
         protected Boolean isNameTerrainAlreadyExist(String nom)
         {
             Terrain terrain = entities.Terrain.FirstOrDefault(t => t.nom == nom);
@@ -253,22 +243,17 @@ namespace GestionDeClubs.terrain
             
         }
 
+        /// <summary>
+        /// Show the gestion div if the user is a Dirigeant or admin
+        /// </summary>
         protected void showGestion()
         {
-            if(hasRight())
+            if(Util.hasRight(new List<int>() { 1, 2 }, userConnected))
             {
                 gestionTerrain.Style.Add("Display", "auto");
             }
-            else
-            {
-                gestionTerrain.Style.Add("Display", "none");
-            }
         }
 
-        protected Boolean hasRight()
-        {
-            return (userConnected.id_Statut == 1 || userConnected.id_Statut == 2);
-        }
 
     }
 }
