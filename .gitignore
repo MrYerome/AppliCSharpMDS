@@ -40,3 +40,17 @@ GestionDeClubs/GestionDeClubs/obj/Debug/TempPE/Model1\.Context\.cs\.dll
 GestionDeClubs/GestionDeClubs/obj/Debug/TempPE/Model1\.cs\.dll
 
 GestionDeClubs/GestionDeClubs/obj/Debug/TempPE/Model1\.Designer\.cs\.dll
+
+GestionDeClubs/GestionDeClubs/obj/Release/GestionDeClubs\.csprojResolveAssemblyReference\.cache
+
+GestionDeClubs/GestionDeClubs/obj/Release/GestionDeClubs\.csproj\.CoreCompileInputs\.cache
+
+GestionDeClubs/GestionDeClubs/obj/Release/GestionDeClubs\.csproj\.FileListAbsolute\.txt
+
+GestionDeClubs/GestionDeClubs/obj/Release/DesignTimeResolveAssemblyReferencesInput\.cache
+
+GestionDeClubs/GestionDeClubs/obj/Debug/
+
+*.cache
+
+GestionDeClubs/GestionDeClubs/obj/Release/

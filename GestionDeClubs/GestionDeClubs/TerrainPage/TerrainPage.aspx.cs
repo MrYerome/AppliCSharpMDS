@@ -7,9 +7,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 
-namespace GestionDeClubs.terrain
+namespace GestionDeClubs.TerrainPage
 {
-    public partial class terrain : Page
+    public partial class TerrainPage : Page
     {
         private ClubFootEntities entities = new ClubFootEntities();
         private Users userConnected = new Users();
@@ -21,14 +21,13 @@ namespace GestionDeClubs.terrain
             Users user = entities.Users.FirstOrDefault(x => x.identifiant == "admin" && x.password == "admin");
             Page.Session["userConnected"] = user;
 #endif
-            if (Page.Session["userConnected"] != null)
+            if (Util.isConnected((Users)Page.Session["userConnected"]))
             {
                 userConnected = (Users)Page.Session["userConnected"];
                 showGestion();
                 if (!IsPostBack)
                 {
                     loadDatagrid();
-                    
                 }
             }
             else
@@ -141,7 +140,7 @@ namespace GestionDeClubs.terrain
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
-                if (Util.hasRight(new List<int>() { 1, 2 }, userConnected ))
+                if (Util.isStatut(new List<int>() { 1, 2 }, userConnected ))
                 {
                     
                     e.Row.Attributes["onclick"] = Page.ClientScript.GetPostBackClientHyperlink(gridViewTerrain, "Select$" + e.Row.RowIndex);
@@ -248,7 +247,7 @@ namespace GestionDeClubs.terrain
         /// </summary>
         protected void showGestion()
         {
-            if(Util.hasRight(new List<int>() { 1, 2 }, userConnected))
+            if(Util.isStatut(new List<int>() { 1, 2 }, userConnected))
             {
                 gestionTerrain.Style.Add("Display", "auto");
             }

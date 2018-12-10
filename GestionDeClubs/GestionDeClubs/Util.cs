@@ -112,7 +112,7 @@ namespace GestionDeClubs
         /// <param name="statutId"></param>
         /// <param name="u"></param>
         /// <returns>Boolean</returns>
-        public static Boolean hasRight(int statutId, Users u)
+        public static Boolean isStatut(int statutId, Users u)
         {
             return (u.id_Statut == statutId);
         }
@@ -124,12 +124,20 @@ namespace GestionDeClubs
         /// <param name="statutsId"></param>
         /// <param name="u"></param>
         /// <returns>Boolean</returns>
-        public static Boolean hasRight(List<int> statutsId, Users u)
+        public static Boolean isStatut(List<int> statutsId, Users u)
         {
             return statutsId.Contains(u.id_Statut);
         }
         
-
+        /// <summary>
+        /// Vérifier que l'utilisateur fourni est différent de null
+        /// </summary>
+        /// <param name="users"></param>
+        /// <returns></returns>
+        public static Boolean isConnected(Users users)
+        {
+            return (users != null);
+        }
     }
 
     

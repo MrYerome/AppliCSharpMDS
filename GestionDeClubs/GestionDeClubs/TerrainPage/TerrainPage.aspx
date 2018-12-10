@@ -1,11 +1,11 @@
-﻿<%@ Page Title="Gestion Terrains" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="terrain.aspx.cs" Inherits="GestionDeClubs.terrain.terrain" EnableEventValidation = "false"%>
+﻿<%@ Page Title="Gestion Terrains" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TerrainPage.aspx.cs" Inherits="GestionDeClubs.TerrainPage.TerrainPage" EnableEventValidation = "false"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     
     <h1>Les terrains du club</h1>
     
     <div runat="server" id="gestionTerrain" style="display:none">
     
-        <h3>Ajouter un terrain</h3>
+        <h3>Gestion des terrains</h3>
         
         <div runat="server" id="ContainerMessageValidate" class="hide" role="alert">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -38,7 +38,7 @@
                 else
                 { %>
                 <asp:Button runat="server" ID="modifTerrainButton" Text="Modifier" OnClick="modifTerrainButton_Click" ValidationGroup="TerrainForm" CssClass="btn btn-primary"/>
-                <asp:Button runat="server" ID="suppTerrainButton" Text="Supprimer" OnClick="suppTerrainButton_Click" ValidationGroup="TerrainForm" CssClass="btn btn-primary"/>
+                <asp:Button runat="server" ID="suppTerrainButton" Text="Supprimer" OnClick="suppTerrainButton_Click" ValidationGroup="TerrainForm" CssClass="btn btn-primary" OnClientClick="return confirm('Voulez-vous supprimer le terrain ? ');"/>
                 <%} %>
            
             </div>

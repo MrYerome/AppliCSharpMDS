@@ -7,19 +7,19 @@
 // </généré automatiquement>
 //------------------------------------------------------------------------------
 
-namespace GestionDeClubs.terrain {
+namespace GestionDeClubs.EntrainementPage {
     
     
-    public partial class terrain {
+    public partial class EntrainementPage {
         
         /// <summary>
-        /// Contrôle gestionTerrain.
+        /// Contrôle gestionEntrainement.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl gestionTerrain;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl gestionEntrainement;
         
         /// <summary>
         /// Contrôle ContainerMessageValidate.
@@ -40,84 +40,84 @@ namespace GestionDeClubs.terrain {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl messageValidate;
         
         /// <summary>
-        /// Contrôle idTerrain.
+        /// Contrôle dateEntrainement.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField idTerrain;
+        protected global::System.Web.UI.WebControls.TextBox dateEntrainement;
         
         /// <summary>
-        /// Contrôle nameTerrain.
+        /// Contrôle RequiredFieldValidator1.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nameTerrain;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
-        /// Contrôle requireName.
+        /// Contrôle heureEntrainement.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requireName;
+        protected global::System.Web.UI.WebControls.TextBox heureEntrainement;
         
         /// <summary>
-        /// Contrôle addressTerrain.
+        /// Contrôle RequiredFieldValidator2.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox addressTerrain;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
-        /// Contrôle requireAddress.
+        /// Contrôle typeEntrainement.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requireAddress;
+        protected global::System.Web.UI.WebControls.TextBox typeEntrainement;
         
         /// <summary>
-        /// Contrôle addTerrainButton.
+        /// Contrôle RequiredFieldValidator3.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addTerrainButton;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
-        /// Contrôle modifTerrainButton.
+        /// Contrôle ListTerrainEntrainement.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button modifTerrainButton;
+        protected global::System.Web.UI.WebControls.DropDownList ListTerrainEntrainement;
         
         /// <summary>
-        /// Contrôle suppTerrainButton.
+        /// Contrôle RequiredFieldValidator4.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button suppTerrainButton;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
         
         /// <summary>
-        /// Contrôle gridViewTerrain.
+        /// Contrôle addEntrainement.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridViewTerrain;
+        protected global::System.Web.UI.WebControls.Button addEntrainement;
     }
 }
