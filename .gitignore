@@ -9,12 +9,48 @@ GestionDeClubs/.vs/GestionDeClubs/v15/Server/**
 GestionDeClubs/.vs/**
 
 
-GestionDeClubs/\.vs/
+GestionDeClubs/GestionDeClubs\.Tests/bin/Debug/GestionDeClubs\.dll
 
-GestionDeClubs/GestionDeClubs/bin/
+GestionDeClubs/GestionDeClubs\.Tests/bin/Debug/GestionDeClubs\.pdb
 
-GestionDeClubs/GestionDeClubs\.Tests/obj/Debug/
+GestionDeClubs/GestionDeClubs\.Tests/bin/Debug/GestionDeClubs\.Tests\.dll
 
-GestionDeClubs/GestionDeClubs/obj/
+GestionDeClubs/GestionDeClubs\.Tests/bin/Debug/GestionDeClubs\.Tests\.pdb
+
+GestionDeClubs/GestionDeClubs/bin/GestionDeClubs\.dll
+
+GestionDeClubs/GestionDeClubs/bin/GestionDeClubs\.pdb
 
 GestionDeClubs/GestionDeClubs/Model1\.Designer\.cs
+
+GestionDeClubs/GestionDeClubs/Model1\.edmx
+
+GestionDeClubs/GestionDeClubs/obj/Debug/edmxResourcesToEmbed/Model1\.csdl
+
+GestionDeClubs/GestionDeClubs/obj/Debug/edmxResourcesToEmbed/Model1\.msl
+
+GestionDeClubs/GestionDeClubs/obj/Debug/edmxResourcesToEmbed/Model1\.ssdl
+
+GestionDeClubs/GestionDeClubs/obj/Debug/GestionDeClubs\.dll
+
+GestionDeClubs/GestionDeClubs/obj/Debug/GestionDeClubs\.pdb
+
+GestionDeClubs/GestionDeClubs/obj/Debug/TempPE/Model1\.Context\.cs\.dll
+
+GestionDeClubs/GestionDeClubs/obj/Debug/TempPE/Model1\.cs\.dll
+
+GestionDeClubs/GestionDeClubs/obj/Debug/TempPE/Model1\.Designer\.cs\.dll
+
+GestionDeClubs/GestionDeClubs/obj/Release/GestionDeClubs\.csprojResolveAssemblyReference\.cache
+
+GestionDeClubs/GestionDeClubs/obj/Release/GestionDeClubs\.csproj\.CoreCompileInputs\.cache
+
+GestionDeClubs/GestionDeClubs/obj/Release/GestionDeClubs\.csproj\.FileListAbsolute\.txt
+
+GestionDeClubs/GestionDeClubs/obj/Release/DesignTimeResolveAssemblyReferencesInput\.cache
+
+GestionDeClubs/GestionDeClubs/obj/Debug/
+
+*.cache
+
+GestionDeClubs/GestionDeClubs/obj/Release/
